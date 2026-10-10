@@ -1,7 +1,8 @@
 # Homebrew tap for Sidescreen
 
 ```sh
-brew install --cask fanzzzd/sidescreen/sidescreen
+brew tap fanzzzd/sidescreen
+brew install --cask sidescreen
 ```
 
 See https://github.com/fanzzzd/sidescreen.
