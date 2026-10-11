@@ -9,15 +9,11 @@ cask "aerospace-sidescreen" do
 
   # Same bundle id and app name as AeroSpace: one replaces the other.
   conflicts_with cask: ["aerospace", "aerospace-dev"]
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args:         ["-d", "com.apple.quarantine", "#{staged_path}/AeroSpace-v#{version}-sidescreen/bin/aerospace"],
-                   must_succeed: false
-    system_command "/usr/bin/xattr",
-                   args:         ["-d", "com.apple.quarantine", "#{appdir}/AeroSpace.app"],
-                   must_succeed: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "{{staged_path}}/AeroSpace-v#{version}-sidescreen/bin/aerospace"], must_succeed: false
+    run "/usr/bin/xattr", args: ["-d", "com.apple.quarantine", "{{appdir}}/AeroSpace.app"], must_succeed: false
   end
 
   app "AeroSpace-v#{version}-sidescreen/AeroSpace.app"
