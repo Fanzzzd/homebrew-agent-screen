@@ -35,6 +35,11 @@ cask "aerospace-sidescreen" do
       ignored-monitors = ['^Sidescreen']
 
     or choose "Keep AeroSpace Off Sidescreen's Displays…" in Sidescreen's menu.
-    macOS asks you to allow Accessibility for AeroSpace again.
+    macOS keeps Accessibility permission per signature, so the old
+    AeroSpace's entry doesn't work for this build. Clear it and allow
+    AeroSpace again when macOS asks:
+
+      tccutil reset Accessibility bobko.aerospace
+      open -a AeroSpace
   EOS
 end
