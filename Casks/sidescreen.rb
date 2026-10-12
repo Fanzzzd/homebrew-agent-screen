@@ -1,6 +1,6 @@
 cask "sidescreen" do
-  version "0.1.11"
-  sha256 "9c2507076d1192031ff457b3e4f70a218822277eab6a2aee34f662fc92973754"
+  version "0.1.12"
+  sha256 "426c0d6a726d2717e54b45a409fcfe293cf5f5191732e4200d872caf86dd9baa"
 
   url "https://github.com/fanzzzd/sidescreen/releases/download/v#{version}/Sidescreen-#{version}.dmg"
   name "Sidescreen"
