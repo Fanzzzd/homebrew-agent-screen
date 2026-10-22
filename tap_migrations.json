@@ -1,3 +1,4 @@
 {
-  "aerospace-sidescreen": "aerospace-agent-screen"
+  "aerospace-sidescreen": "aerospace-agent-screen",
+  "sidescreen": "agent-screen"
 }
