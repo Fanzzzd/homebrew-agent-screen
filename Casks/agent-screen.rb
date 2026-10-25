@@ -1,6 +1,6 @@
 cask "agent-screen" do
-  version "0.1.15"
-  sha256 "a505ab96000dcbba13bf5deef9e5d6a20028327bf30ceff9c25c8d9eef48c652"
+  version "0.1.16"
+  sha256 "92f01a4e1e6b0db28fed3df312b8c6cf3959d5b4e54590e3627fa05ff3201de6"
 
   url "https://github.com/fanzzzd/agent-screen/releases/download/v#{version}/AgentScreen-#{version}.dmg"
   name "Agent Screen"
