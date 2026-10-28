@@ -1,6 +1,6 @@
 cask "agent-screen" do
-  version "0.1.17"
-  sha256 "383372f92b2055904248645388b3516ecfad15e8598a2923426aeb62dd332467"
+  version "0.1.18"
+  sha256 "70859514175202dd8104e873862bb2e201a2c666fa74353fd1d3cb10e0d974f8"
 
   url "https://github.com/fanzzzd/agent-screen/releases/download/v#{version}/AgentScreen-#{version}.dmg"
   name "Agent Screen"
@@ -13,6 +13,9 @@ cask "agent-screen" do
     url :url
     strategy :github_latest
   end
+
+  # Agent Screen updates itself (Sparkle), and brew leaves it to.
+  auto_updates true
 
   app "Agent Screen.app"
 
